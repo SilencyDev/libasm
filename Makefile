@@ -6,14 +6,14 @@
 #    By: kmacquet <kmacquet@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/03/23 09:56:23 by kmacquet          #+#    #+#              #
-#    Updated: 2021/03/23 16:19:14 by kmacquet         ###   ########.fr        #
+#    Updated: 2021/03/23 17:05:24 by kmacquet         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libasm.a
 CC = nasm -fmacho64
 SRCS = ft_strlen.s ft_strcpy.s ft_strcmp \
-		ft_strdup.s
+		ft_strdup.s ft_read.s ft_write.s
 OBJS = $(SRCS:.s=.o)
 RM = rm -rf
 
