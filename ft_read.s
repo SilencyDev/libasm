@@ -1,15 +1,15 @@
+bits 64
 global _ft_read
+extern ___error
 
 _ft_read :
-	mov		rax, 0
+	mov		rax, 0x2000003
 	syscall
-	cmp		rax, 0
-	jl		error
+	jc		set_error
 	ret
 
-error :
-	neg		rax
-	mov		rdi, rax
+set_error :
+	mov		edi, eax
 	call	___error
 	mov		[rax], rdi
 	mov		rax, -1

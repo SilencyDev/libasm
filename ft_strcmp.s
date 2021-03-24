@@ -1,3 +1,4 @@
+bits 64
 global _ft_strcmp
 
 _ft_strcmp :
