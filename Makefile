@@ -6,7 +6,7 @@
 #    By: kmacquet <kmacquet@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/03/23 09:56:23 by kmacquet          #+#    #+#              #
-#    Updated: 2021/03/23 17:05:24 by kmacquet         ###   ########.fr        #
+#    Updated: 2021/03/24 17:57:08 by kmacquet         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ RM = rm -rf
 all : $(NAME)
 
 $(NAME) : $(OBJS)
-	ar rc $@ $(OBJS)
+	ar rcs $@ $(OBJS)
 
 .s.o :
 	$(CC) -o $@ $?

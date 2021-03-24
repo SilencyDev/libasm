@@ -11,15 +11,14 @@ _ft_strdup :
 	inc		rax
 	mov		rdi, rax
 	call	_malloc
-	cmp		rax, 0
-	jz		error
+	jc		error
 	mov		rdi, rax
 	pop		rsi
 	call	_ft_strcpy
 	ret
 error :
-	neg		rax
-	mov		rdi, rax
+	neg		eax
+	mov		edi, eax
 	call	___error
 	mov		[rax], rdi
 	mov		rax, -1
